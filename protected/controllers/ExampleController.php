@@ -48,5 +48,16 @@ class ExampleController extends Controller {
         # Outputs ready PDF
         $mPDF1->Output();
     }
+    
+    public function actionNode()
+    {
+        Yii::app()->nodeSocket->registerClientScripts();
+        $this->render('node');
+    }
+    public function actionNode2()
+    {
+        Yii::app()->nodeSocket->registerClientScripts();
+        $this->render('node2');
+    }
 
 }

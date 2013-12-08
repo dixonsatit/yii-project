@@ -40,6 +40,12 @@ return array(
     ),
     // application components
     'components' => array(
+        
+        'nodeSocket' => array(
+            'class' => 'application.extensions.yii-node-socket.lib.php.NodeSocket',
+            'host' => '127.0.0.1', // default is 127.0.0.1, can be ip or domain name, without http
+            'port' => 3001      // default is 3001, should be integer
+        ),
         'authManager' => array(
             'class' => 'RDbAuthManager',
         ),
@@ -85,10 +91,10 @@ return array(
                     'class' => 'CFileLogRoute',
                     'levels' => 'error, warning',
                 ),
-                array(
-                    'class' => 'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
-                    'ipFilters' => array('127.0.0.1', '192.168.1.215'),
-                ),
+                /* array(
+                  'class' => 'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
+                  'ipFilters' => array('127.0.0.1', '192.168.1.215'),
+                  ), */
                 /* array(
                   'class' => 'CEmailLogRoute',
                   'levels' => 'error',
