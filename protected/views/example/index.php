@@ -7,6 +7,6 @@
         <?php echo CHtml::link(' Highchart ',array('/example/heigchart')) ?>
     </li>
 </ul>
-<?php echo  CPasswordHelper::hashPassword('demo'); ?>
+
 
 
