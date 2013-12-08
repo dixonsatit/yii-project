@@ -452,3 +452,54 @@ in /Applications/MAMP/htdocs/yii-project/index.php (13)
 2013/12/08 00:08:38 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
 in /Applications/MAMP/htdocs/yii-project/protected/modules/user/controllers/RegistrationController.php (30)
 in /Applications/MAMP/htdocs/yii-project/index.php (13)
+2013/12/08 12:00:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/MAMP/htdocs/yii-project/protected/modules/rights/components/RController.php:62
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii-project/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /Applications/MAMP/htdocs/framework/web/filters/CFilter.php(38): RightsFilter->preFilter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/yii-project/protected/modules/rights/components/RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/framework/web/filters/CInlineFilter.php(58): RController->filterRights(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/framework/web/CWebApplication.php(282): CController->run('heigchart')
+#8 /Applications/MAMP/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('example/heigcha...')
+#9 /Applications/MAMP/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/yii-project/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-project/example/heigchart
+HTTP_REFERER=http://127.0.0.1/yii-project/user/login
+---
+2013/12/08 12:01:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/MAMP/htdocs/yii-project/protected/modules/rights/components/RController.php:62
+Stack trace:
+#0 /Applications/MAMP/htdocs/yii-project/protected/modules/rights/components/RightsFilter.php(57): RController->accessDenied()
+#1 /Applications/MAMP/htdocs/framework/web/filters/CFilter.php(38): RightsFilter->preFilter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/yii-project/protected/modules/rights/components/RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/framework/web/filters/CInlineFilter.php(58): RController->filterRights(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/framework/web/CWebApplication.php(282): CController->run('mpdf')
+#8 /Applications/MAMP/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('example/mpdf')
+#9 /Applications/MAMP/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/yii-project/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-project/example/mpdf
+HTTP_REFERER=http://127.0.0.1/yii-project/example/index
+---
+2013/12/08 12:02:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/MAMP/htdocs/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Applications/MAMP/htdocs/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 /Applications/MAMP/htdocs/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/MAMP/htdocs/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/MAMP/htdocs/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/MAMP/htdocs/framework/web/CWebApplication.php(282): CController->run('view')
+#8 /Applications/MAMP/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController('rights/assignme...')
+#9 /Applications/MAMP/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/MAMP/htdocs/yii-project/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-project/rights/assignment/view
+HTTP_REFERER=http://127.0.0.1/yii-project/example/mpdf
+---
