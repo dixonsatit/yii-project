@@ -59,5 +59,10 @@ class ExampleController extends Controller {
         Yii::app()->nodeSocket->registerClientScripts();
         $this->render('node2');
     }
+    
+    public function actionNotify()
+    {
+        $this->render('notify');
+    }
 
 }

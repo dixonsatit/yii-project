@@ -12,6 +12,9 @@
     <li>
         <?php echo CHtml::link(' Node.js - send',array('/example/node2')) ?>
     </li>
+    <li>
+        <?php echo CHtml::link(' Notify',array('/example/notify')) ?>
+    </li>
 </ul>
 
 

@@ -8,7 +8,7 @@ return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'Yii Project',
     // preloading 'log' component
-    'preload' => array('log'),
+    'preload' => array('log','noty'),
     'aliases' => array(
         'RestfullYii' => realpath(__DIR__ . '/../extensions/starship/RestfullYii'),
     ),
@@ -40,7 +40,11 @@ return array(
     ),
     // application components
     'components' => array(
-        
+        'noty' => array(
+            'class' => 'ext.dsnotify.DsNotify',
+            //'layout'=>'topRight',
+            //'theme'=>'default'
+        ),
         'nodeSocket' => array(
             'class' => 'application.extensions.yii-node-socket.lib.php.NodeSocket',
             'host' => '127.0.0.1', // default is 127.0.0.1, can be ip or domain name, without http
