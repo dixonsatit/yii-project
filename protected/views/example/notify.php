@@ -2,10 +2,10 @@
 Yii::app()->noty->noty('message', 'warning', 'top');
 
 Yii::app()->noty->noty('message', 'alert', 'topLeft');
-Yii::app()->noty->noty('message', 'alert', 'topCenter');
-Yii::app()->noty->noty('message', 'alert', 'topRight');
+Yii::app()->noty->noty('message', 'error', 'topCenter');
+Yii::app()->noty->noty('message', 'success', 'topRight');
 
-Yii::app()->noty->noty('message', 'alert', 'centerLeft');
+Yii::app()->noty->noty('message', 'infomation', 'centerLeft');
 Yii::app()->noty->noty('message', 'alert', 'center');
 Yii::app()->noty->noty('message', 'alert', 'centerRight');
 
