@@ -6,6 +6,12 @@
     <li>
         <?php echo CHtml::link(' Highchart ',array('/example/heigchart')) ?>
     </li>
+    <li>
+        <?php echo CHtml::link(' Node.js - recive',array('/example/node')) ?>
+    </li>
+    <li>
+        <?php echo CHtml::link(' Node.js - send',array('/example/node2')) ?>
+    </li>
 </ul>
 
 

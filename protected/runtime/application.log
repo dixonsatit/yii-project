@@ -828,3 +828,25 @@ Stack trace:
 REQUEST_URI=/yii-project/assets/f0ace0c/client.js
 HTTP_REFERER=http://127.0.0.1/yii-project/example/node
 ---
+2013/12/08 21:32:37 [error] [php] Undefined variable: value (/Applications/MAMP/htdocs/yii-project/protected/views/example/node2.php:13)
+Stack trace:
+#0 /Applications/MAMP/htdocs/framework/web/CController.php(869): ExampleController->renderFile()
+#1 /Applications/MAMP/htdocs/framework/web/CController.php(782): ExampleController->renderPartial()
+#2 /Applications/MAMP/htdocs/yii-project/protected/controllers/ExampleController.php(60): ExampleController->render()
+#3 /Applications/MAMP/htdocs/framework/web/actions/CInlineAction.php(49): ExampleController->actionNode2()
+#4 /Applications/MAMP/htdocs/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/MAMP/htdocs/framework/web/filters/CFilterChain.php(133): ExampleController->runAction()
+#6 /Applications/MAMP/htdocs/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/yii-project/protected/modules/rights/components/RController.php(36): RightsFilter->filter()
+#8 /Applications/MAMP/htdocs/framework/web/filters/CInlineFilter.php(58): ExampleController->filterRights()
+#9 /Applications/MAMP/htdocs/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Applications/MAMP/htdocs/framework/web/CController.php(291): CFilterChain->run()
+#11 /Applications/MAMP/htdocs/framework/web/CController.php(265): ExampleController->runActionWithFilters()
+#12 /Applications/MAMP/htdocs/framework/web/CWebApplication.php(282): ExampleController->run()
+#13 /Applications/MAMP/htdocs/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Applications/MAMP/htdocs/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Applications/MAMP/htdocs/yii-project/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii-project/example/node2
+in /Applications/MAMP/htdocs/yii-project/protected/views/example/node2.php (13)
+in /Applications/MAMP/htdocs/yii-project/protected/controllers/ExampleController.php (60)
+in /Applications/MAMP/htdocs/yii-project/protected/modules/rights/components/RController.php (36)

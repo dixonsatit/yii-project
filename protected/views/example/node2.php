@@ -1,15 +1,17 @@
 <?php
-// create frame
-$frame = Yii::app()->nodeSocket->createEventFrame();
+$multipleFrame = Yii::app()->nodeSocket->createMultipleFrame();
 
-// set event name
-$frame->setEventName('updateBoard');
+$eventFrame = Yii::app()->nodeSocket->createEventFrame();
 
-// set room name
-$frame->setRoom('testRoom');
+$eventFrame->setEventName('updateBoard');
+$eventFrame['boardId'] = rand(1, 100);
+$eventFrame['boardData'] = 'Text.....'.date('H:m:s');
 
-// set data
-$frame['key'] = 5;
+$dataEvent = Yii::app()->nodeSocket->createPublicDataFrame();
 
-// send
-$frame->send();
+$dataEvent->setKey('error.strings');
+$dataEvent['key'] = 5;
+
+$multipleFrame->addFrame($eventFrame);
+$multipleFrame->addFrame($dataEvent);
+$multipleFrame->send();
