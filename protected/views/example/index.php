@@ -15,6 +15,9 @@
     <li>
         <?php echo CHtml::link(' Notify',array('/example/notify')) ?>
     </li>
+    <li>
+        <?php echo CHtml::link(' Pdfjs',array('/example/pdfjs')) ?>
+    </li>
 </ul>
 
 

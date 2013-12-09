@@ -55,7 +55,7 @@ class PdfJs extends CWidget
   public function run()
   {
     // Publish extension assets
-    $basePath=Yii::getPathOfAlias('ext.pdfjs.assets');
+    $basePath=Yii::getPathOfAlias('ext.dspdfjs.assets');
     $baseUrl=Yii::app()->getAssetManager()->publish($basePath);
     
 

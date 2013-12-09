@@ -64,5 +64,9 @@ class ExampleController extends Controller {
     {
         $this->render('notify');
     }
+    public function actionPdfjs()
+    {
+        $this->render('pdfjs');
+    }
 
 }
