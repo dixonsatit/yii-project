@@ -7,10 +7,12 @@
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'Yii Project',
+    'theme'=>'ihospital',
     // preloading 'log' component
-    'preload' => array('log','noty'),
+    'preload' => array('log', 'noty'),
     'aliases' => array(
         'RestfullYii' => realpath(__DIR__ . '/../extensions/starship/RestfullYii'),
+        'bootstrap' => 'application.modules.bootstrap'
     ),
     // autoloading model and component classes
     'import' => array(
@@ -20,10 +22,17 @@ return array(
         'application.modules.user.components.*',
         'application.modules.rights.*',
         'application.modules.rights.components.*',
+        'application.modules.bootstrap.components.*',
     ),
     'modules' => array(
+        'bootstrap' => array(
+            'class' => 'bootstrap.BootStrapModule',
+        ),
         // uncomment the following to enable the Gii tool
         'gii' => array(
+            'generatorPaths' => array(
+                'bootstrap.gii'
+            ),
             'class' => 'system.gii.GiiModule',
             'password' => '1234',
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
@@ -40,10 +49,13 @@ return array(
     ),
     // application components
     'components' => array(
+        'BSHtml' => array(
+            'class' => 'bootstrap.components.BSHtml'
+        ),
         'noty' => array(
             'class' => 'ext.dsnotify.DsNotify',
-            //'layout'=>'topRight',
-            //'theme'=>'default'
+        //'layout'=>'topRight',
+        //'theme'=>'default'
         ),
         'nodeSocket' => array(
             'class' => 'application.extensions.yii-node-socket.lib.php.NodeSocket',
