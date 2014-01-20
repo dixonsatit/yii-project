@@ -7,7 +7,7 @@
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'Yii Project',
-    'theme'=>'ihospital',
+    //'theme'=>'ihospital',
     // preloading 'log' component
     'preload' => array('log', 'noty'),
     'aliases' => array(
