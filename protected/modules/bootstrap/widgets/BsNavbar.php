@@ -14,6 +14,8 @@
  */
 class BsNavbar extends CWidget
 {
+    
+    public $navbarDataTarget;
     /**
      * @var string the navbar color.
      */
@@ -113,7 +115,11 @@ class BsNavbar extends CWidget
                 )
             );
             $collapseContent = ob_get_clean();
-            $collapseLink =  BSHtml::navbarCollapseLink('#' . $collapseWidget->getId());
+            
+            if($this->navbarDataTarget) $data_target = $this->navbarDataTarget;
+            else $data_target = '#' . $collapseWidget->getId();
+            
+            $collapseLink =  BSHtml::navbarCollapseLink($data_target);
 
             echo BSHtml::tag('div',array('class'=>'navbar-header'),$collapseLink . $brand) . $collapseContent;
 
